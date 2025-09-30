@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Document Simplifier - Project Structure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .header p {
+            color: #b0c4de;
+            font-size: 1.1em;
+        }
+        
+        .tree {
+            font-size: 14px;
+            white-space: pre;
+            overflow-x: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .folder {
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+        
+        .file {
+            color: #ffffff;
+        }
+        
+        .file.config {
+            color: #ffa726;
+        }
+        
+        .file.python {
+            color: #4caf50;
+        }
+        
+        .file.js {
+            color: #ffeb3b;
+        }
+        
+        .file.jsx {
+            color: #61dafb;
+        }
+        
+        .file.css {
+            color: #ff5722;
+        }
+        
+        .file.md {
+            color: #9c27b0;
+        }
+        
+        .file.json {
+            color: #ff9800;
+        }
+        
+        .file.html {
+            color: #e91e63;
+        }
+        
+        .file.docker {
+            color: #2196f3;
+        }
+        
+        .file.yaml {
+            color: #00bcd4;
+        }
+        
+        .file.env {
+            color: #795548;
+        }
+        
+        .connector {
+            color: #666;
+        }
+        
+        .root {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .stats {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #b0c4de;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Legal Document Simplifier</h1>
+            <p>Complete Project Structure Visualization</p>
+        </div>
+        
+        <div class="tree"><span class="root">legal-doc-simplifier/</span>
+<span class="connector">│</span>
+<span class="connector">├──</span> <span class="folder">📁 frontend/</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 public/</span>
+<span class="connector">│   │   ├──</span> <span class="file html">index.html</span>
+<span class="connector">│   │   ├──</span> <span class="file">favicon.ico</span>
+<span class="connector">│   │   ├──</span> <span class="file json">manifest.json</span>
+<span class="connector">│   │   └──</span> <span class="folder">📁 assets/</span>
+<span class="connector">│   │       ├──</span> <span class="folder">📁 images/</span>
+<span class="connector">│   │       │   ├──</span> <span class="file">logo.png</span>
+<span class="connector">│   │       │   ├──</span> <span class="file">hero-bg.jpg</span>
+<span class="connector">│   │       │   └──</span> <span class="folder">icons/</span>
+<span class="connector">│   │       │       ├──</span> <span class="file">upload.svg</span>
+<span class="connector">│   │       │       ├──</span> <span class="file">download.svg</span>
+<span class="connector">│   │       │       └──</span> <span class="file">chat.svg</span>
+<span class="connector">│   │       └──</span> <span class="folder">📁 fonts/</span>
+<span class="connector">│   │</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 src/</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 components/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file jsx">Header.jsx</span>
+<span class="connector">│   │   │   ├──</span> <span class="file jsx">Footer.jsx</span>
+<span class="connector">│   │   │   ├──</span> <span class="file jsx">Navbar.jsx</span>
+<span class="connector">│   │   │   ├──</span> <span class="folder">📁 Upload/</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file jsx">FileUpload.jsx</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file jsx">DragDropZone.jsx</span>
+<span class="connector">│   │   │   │   └──</span> <span class="file jsx">FilePreview.jsx</span>
+<span class="connector">│   │   │   ├──</span> <span class="folder">📁 DocumentViewer/</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file jsx">DocumentDisplay.jsx</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file jsx">SideBySideView.jsx</span>
+<span class="connector">│   │   │   │   └──</span> <span class="file jsx">ClauseHighlighter.jsx</span>
+<span class="connector">│   │   │   ├──</span> <span class="folder">📁 ChatAssistant/</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file jsx">ChatInterface.jsx</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file jsx">MessageBubble.jsx</span>
+<span class="connector">│   │   │   │   └──</span> <span class="file jsx">QueryInput.jsx</span>
+<span class="connector">│   │   │   ├──</span> <span class="folder">📁 Legal/</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file jsx">Disclaimer.jsx</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file jsx">PrivacyNotice.jsx</span>
+<span class="connector">│   │   │   │   └──</span> <span class="file jsx">TermsOfUse.jsx</span>
+<span class="connector">│   │   │   └──</span> <span class="folder">📁 UI/</span>
+<span class="connector">│   │   │       ├──</span> <span class="file jsx">Button.jsx</span>
+<span class="connector">│   │   │       ├──</span> <span class="file jsx">Modal.jsx</span>
+<span class="connector">│   │   │       ├──</span> <span class="file jsx">Loader.jsx</span>
+<span class="connector">│   │   │       └──</span> <span class="file jsx">LanguageSelector.jsx</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 pages/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file jsx">Home.jsx</span>
+<span class="connector">│   │   │   ├──</span> <span class="file jsx">DocumentViewer.jsx</span>
+<span class="connector">│   │   │   ├──</span> <span class="file jsx">ClauseExplorer.jsx</span>
+<span class="connector">│   │   │   ├──</span> <span class="file jsx">About.jsx</span>
+<span class="connector">│   │   │   └──</span> <span class="file jsx">Contact.jsx</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 hooks/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file js">useFileUpload.js</span>
+<span class="connector">│   │   │   ├──</span> <span class="file js">useDocumentProcessor.js</span>
+<span class="connector">│   │   │   └──</span> <span class="file js">useChat.js</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 utils/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file js">api.js</span>
+<span class="connector">│   │   │   ├──</span> <span class="file js">fileHandlers.js</span>
+<span class="connector">│   │   │   ├──</span> <span class="file js">textProcessing.js</span>
+<span class="connector">│   │   │   └──</span> <span class="file js">constants.js</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 styles/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file css">globals.css</span>
+<span class="connector">│   │   │   ├──</span> <span class="file css">components.css</span>
+<span class="connector">│   │   │   └──</span> <span class="file css">responsive.css</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   └──</span> <span class="file jsx">App.jsx</span>
+<span class="connector">│   │</span>
+<span class="connector">│   ├──</span> <span class="file json">package.json</span>
+<span class="connector">│   ├──</span> <span class="file json">package-lock.json</span>
+<span class="connector">│   └──</span> <span class="file md">README.md</span>
+<span class="connector">│</span>
+<span class="connector">├──</span> <span class="folder">📁 backend/</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 app/</span>
+<span class="connector">│   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   ├──</span> <span class="file python">main.py</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 api/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="folder">📁 routes/</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">document_routes.py</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">ai_routes.py</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">chat_routes.py</span>
+<span class="connector">│   │   │   │   └──</span> <span class="file python">health_routes.py</span>
+<span class="connector">│   │   │   └──</span> <span class="file python">dependencies.py</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 core/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">config.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">security.py</span>
+<span class="connector">│   │   │   └──</span> <span class="file python">middleware.py</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 services/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="folder">📁 ai/</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">document_processor.py</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">language_simplifier.py</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">translation_service.py</span>
+<span class="connector">│   │   │   │   └──</span> <span class="file python">chat_service.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="folder">📁 document/</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">pdf_processor.py</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">docx_processor.py</span>
+<span class="connector">│   │   │   │   ├──</span> <span class="file python">ocr_service.py</span>
+<span class="connector">│   │   │   │   └──</span> <span class="file python">text_extractor.py</span>
+<span class="connector">│   │   │   └──</span> <span class="folder">📁 external/</span>
+<span class="connector">│   │   │       ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   │       ├──</span> <span class="file python">openai_client.py</span>
+<span class="connector">│   │   │       └──</span> <span class="file python">huggingface_client.py</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 models/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">document.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">user_session.py</span>
+<span class="connector">│   │   │   └──</span> <span class="file python">chat_history.py</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 utils/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">file_handlers.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">validators.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">formatters.py</span>
+<span class="connector">│   │   │   └──</span> <span class="file python">exceptions.py</span>
+<span class="connector">│   │   │</span>
+<span class="connector">│   │   └──</span> <span class="folder">📁 prompts/</span>
+<span class="connector">│   │       ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │       ├──</span> <span class="file python">legal_simplification.py</span>
+<span class="connector">│   │       ├──</span> <span class="file python">translation_prompts.py</span>
+<span class="connector">│   │       └──</span> <span class="file python">chat_prompts.py</span>
+<span class="connector">│   │</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 tests/</span>
+<span class="connector">│   │   ├──</span> <span class="file python">__init__.py</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 unit/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">test_document_processor.py</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">test_ai_services.py</span>
+<span class="connector">│   │   │   └──</span> <span class="file python">test_utils.py</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 integration/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file python">test_api_endpoints.py</span>
+<span class="connector">│   │   │   └──</span> <span class="file python">test_file_upload.py</span>
+<span class="connector">│   │   └──</span> <span class="file python">conftest.py</span>
+<span class="connector">│   │</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 data/</span>
+<span class="connector">│   │   ├──</span> <span class="folder">📁 samples/</span>
+<span class="connector">│   │   │   ├──</span> <span class="file">sample_contract.pdf</span>
+<span class="connector">│   │   │   ├──</span> <span class="file">sample_agreement.docx</span>
+<span class="connector">│   │   │   └──</span> <span class="file">sample_lease.pdf</span>
+<span class="connector">│   │   └──</span> <span class="folder">📁 temp/</span>
+<span class="connector">│   │       └──</span> <span class="file">.gitkeep</span>
+<span class="connector">│   │</span>
+<span class="connector">│   ├──</span> <span class="file config">requirements.txt</span>
+<span class="connector">│   ├──</span> <span class="file docker">Dockerfile</span>
+<span class="connector">│   └──</span> <span class="file md">README.md</span>
+<span class="connector">│</span>
+<span class="connector">├──</span> <span class="folder">📁 ai_models/</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 fine_tuned/</span>
+<span class="connector">│   │   ├──</span> <span class="folder">legal_simplifier_model/</span>
+<span class="connector">│   │   └──</span> <span class="folder">translation_models/</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 datasets/</span>
+<span class="connector">│   │   ├──</span> <span class="folder">legal_documents/</span>
+<span class="connector">│   │   ├──</span> <span class="folder">simplified_versions/</span>
+<span class="connector">│   │   └──</span> <span class="file json">training_data.json</span>
+<span class="connector">│   └──</span> <span class="folder">📁 notebooks/</span>
+<span class="connector">│       ├──</span> <span class="file">model_training.ipynb</span>
+<span class="connector">│       ├──</span> <span class="file">data_preprocessing.ipynb</span>
+<span class="connector">│       └──</span> <span class="file">evaluation.ipynb</span>
+<span class="connector">│</span>
+<span class="connector">├──</span> <span class="folder">📁 deployment/</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 docker/</span>
+<span class="connector">│   │   ├──</span> <span class="file docker">Dockerfile.frontend</span>
+<span class="connector">│   │   ├──</span> <span class="file docker">Dockerfile.backend</span>
+<span class="connector">│   │   └──</span> <span class="file yaml">docker-compose.yml</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 kubernetes/</span>
+<span class="connector">│   │   ├──</span> <span class="file yaml">deployment.yaml</span>
+<span class="connector">│   │   ├──</span> <span class="file yaml">service.yaml</span>
+<span class="connector">│   │   └──</span> <span class="file yaml">ingress.yaml</span>
+<span class="connector">│   └──</span> <span class="folder">📁 scripts/</span>
+<span class="connector">│       ├──</span> <span class="file">deploy.sh</span>
+<span class="connector">│       └──</span> <span class="file">setup.sh</span>
+<span class="connector">│</span>
+<span class="connector">├──</span> <span class="folder">📁 docs/</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 api/</span>
+<span class="connector">│   │   ├──</span> <span class="file yaml">openapi.yaml</span>
+<span class="connector">│   │   └──</span> <span class="file md">endpoints.md</span>
+<span class="connector">│   ├──</span> <span class="folder">📁 user_guide/</span>
+<span class="connector">│   │   ├──</span> <span class="file md">getting_started.md</span>
+<span class="connector">│   │   ├──</span> <span class="file md">features.md</span>
+<span class="connector">│   │   └──</span> <span class="file md">troubleshooting.md</span>
+<span class="connector">│   └──</span> <span class="folder">📁 technical/</span>
+<span class="connector">│       ├──</span> <span class="file md">architecture.md</span>
+<span class="connector">│       ├──</span> <span class="file md">deployment_guide.md</span>
+<span class="connector">│       └──</span> <span class="file md">ai_model_specs.md</span>
+<span class="connector">│</span>
+<span class="connector">├──</span> <span class="folder">📁 config/</span>
+<span class="connector">│   ├──</span> <span class="file env">development.env</span>
+<span class="connector">│   ├──</span> <span class="file env">production.env</span>
+<span class="connector">│   └──</span> <span class="file config">database.config</span>
+<span class="connector">│</span>
+<span class="connector">├──</span> <span class="folder">📁 legal/</span>
+<span class="connector">│   ├──</span> <span class="file md">privacy_policy.md</span>
+<span class="connector">│   ├──</span> <span class="file md">terms_of_service.md</span>
+<span class="connector">│   ├──</span> <span class="file md">disclaimer.md</span>
+<span class="connector">│   └──</span> <span class="file md">data_retention_policy.md</span>
+<span class="connector">│</span>
+<span class="connector">├──</span> <span class="file">.gitignore</span>
+<span class="connector">├──</span> <span class="file env">.env.example</span>
+<span class="connector">├──</span> <span class="file yaml">docker-compose.yml</span>
+<span class="connector">├──</span> <span class="file md">README.md</span>
+<span class="connector">├──</span> <span class="file">LICENSE</span>
+<span class="connector">└──</span> <span class="file md">CONTRIBUTING.md</span></div>
+        
+        <div class="stats">
+            <p>📊 Project Statistics: 9 main directories • 80+ files • Full-stack AI application</p>
+            <p>🎨 Color-coded by file type • Interactive visualization • Ready for development</p>
+        </div>
+    </div>
+</body>
+</html>
