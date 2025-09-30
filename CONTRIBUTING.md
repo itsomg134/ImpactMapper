@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { Upload, FileText, Sparkles, Download, Eye, AlertCircle, CheckCircle, Clock, Trash2, Settings } from 'lucide-react';
+guggy";
 
 const LegalAISimplifier = () => {
   const [files, setFiles] = useState([]);
